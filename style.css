@@ -11,11 +11,19 @@
     src: url(./fonts/WanoQuin-ExtraBold.otf);
 }
 
+:root {
+    --primary-color: #E3C37A;
+    --secondary-color:#bb5f09;
+  }
+  
+
+  
 
 body{
     /* color: #fff; */
     /* color: orange; */
-    color:rgb(183, 120, 3);
+    color: var(--primary-color);
+    /* color:rgb(183, 120, 3); */
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
     background-color: #141414;
@@ -72,6 +80,13 @@ a{
     text-decoration: none;
 }
 
+.icon-link  {
+    color: var(--primary-color); /* Set the color of the icons */
+    /* color: #0077B5; */
+    font-size: 28px; /* Adjust the size of the icons */
+    margin-right: 10px; /* Add some spacing between the icons */
+  }
+  
 
   .menu {
     list-style-type: none;
@@ -345,14 +360,34 @@ footer{
 
 
 .title{
-    /* font-family: w; */
+  
     font-family: Georgia, serif;
     width: 540px;
     position: relative;
     height: 110px;
     overflow: hidden;
-    color: #E3C37A;
+    color:  var(--secondary-color);
+    /* color: #e0af3d; */
+
+    /* color: rgb(183, 120, 3); */
+    /* font-family: w; */
+
 }
+
+
+  
+.txt-bottom{
+  
+    font-size: Georgia, serif;
+    font-weight: 700;
+
+    /* color: rgb(183, 120, 3); */
+    /* font-family: w; */
+
+}
+
+
+
 
 .bg{
     font-size: 100px;
@@ -412,6 +447,7 @@ footer{
     font-family: w;
     display: flex;
     text-transform: capitalize;
+    color: var(--secondary-color);
 }
 
 .bottom{
