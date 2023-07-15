@@ -1018,9 +1018,9 @@ footer{
     min-height: 150vh;
     height: 100%;
     display: grid;
-    /* grid-template-columns: repeat(20, 2%);
+     grid-template-columns: repeat(20, 3%);
     grid-template-rows: repeat(30, 3%);
-    justify-content: center;
+   /* justify-content: center;
     justify-items: center;
     align-items: center;
     z-index: 1;
