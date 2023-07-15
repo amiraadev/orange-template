@@ -1,3 +1,18 @@
+// let skewSetter = gsap.quickTo(".skew", "skewY"), // fast
+// 	  clamp = gsap.utils.clamp(-45, 45); // don't let the skew go beyond 20 degrees.
+
+// ScrollSmoother.create({
+// 	wrapper: "#wrapper",
+// 	content: "#content",
+// 	smooth: 2,
+//   speed: 3,
+// 	effects: true,
+// 	onUpdate: self => skewSetter(clamp(self.getVelocity() / -50)),
+// 	onStop: () => skewSetter(0)
+// });
+
+//////////////////////////////////////
+
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
@@ -78,7 +93,7 @@ gsap.utils.toArray('.col').forEach(image=>{
     x:0
   },{
     opacity:1,
-    x:-50,
+    x:-100,
     scrollTrigger:{
       trigger:image,
       start:"10%",

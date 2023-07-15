@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.slide {
+  background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+  padding: 1rem;
+    text-align: center;
+
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background-color: blue;
+}
+
+
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 250px;
+  background-color: #292929;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid rgba(7, 7, 7, 0.12);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon {
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+  max-width: 80px;
+  background: linear-gradient(90deg, orange 0%, rgb(214, 80, 18) 40%, rgba(0, 0, 0, 0.28) 60%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease;
+  background-position: 0px;
+  background-size: 200px;
+}
+
+.icon svg {
+  fill: white;
+}
+
+.card .title-card {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+  color: #ebe6a2;
+    font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+}
+
+.card .text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  height: 270px;
+}
+
+.card:hover .text {
+  transition: all 0.3s ease;
+  opacity: 1;
+  max-height: 40px;
+}
+
+.card:hover .icon {
+  background-position: -120px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon svg path {
+  fill: url('#gradientColor');
+  transition: all 0.3s ease;
+}
+.icon-large {
+    font-size: 36px;
+    color: #ebe6a2;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+
+          <div class="slide1 card">
+            <div class="icon">
+                <i class="fas fa-code icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Frontend Development</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+  
+
+          <div class=" slide2 card">
+            <div class="icon">
+                <i class="fas fa-server icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Backend Development</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+
+          <div class=" slide3 card">
+            <div class="icon">
+                <i class="fas fa-cube icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Backend Development</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+
+          <div class=" slide4 card">
+            <div class="icon">
+                <i class="fas fa-database icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Databases</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+
+          <div class=" slide5 card">
+            <div class="icon">
+                <i class="fas fa-paint-brush icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Design and Prototyping</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+
+          <div class=" slide6 card">
+            <div class="icon">
+                <i class="fas fa-cloud icon-large ">
+                </i>
+            
+            </div>
+            <p class="title-card">Cloud services</p>
+            <p class="text">Check all your favourites in one place.</p>
+          </div>
+
+
+      </div>
+
+ 
+      </div>
+
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+      <script >
+
+const timeline = gsap.timeline({ defaults: { duration: 1 }})
+timeline
+  .from('.slide1', { y: '-100%', ease: 'bounce' })
+  .from('.slide2', { opacity: 0, stagger: .5 })
+  .from('.slide3', { x: '-100vw', ease: 'power2.in' }, 1)
+  .from('.slide4', { x: '-100%' }, '<.5')
+  .to('.footer', {  y: 0, ease: 'elastic' })
+  .fromTo('.button', { opacity: 0, scale: 0, rotation: 720 }, { opacity: 1, scale: 1, rotation: 0 })
+
+const button = document.querySelector('.button')
+
+button.addEventListener('click', () => {
+  timeline.timeScale(3)
+  timeline.reverse()
+})
+
+
+const animation= gsap.to(photos,{yPercents:0,durations:1,stagger:1});
+ScrollTrigger.create({
+  animation:tl,
+  trigger:'.wrapper',
+  start:"top top",
+  end:"bottom bottom",
+  pin:true,
+  scrub:true,
+  ease:"ease"
+})
+
+// const slides = gsap.utils.toArray('.slide');
+
+// slides.forEach((slide) => {
+//   gsap.set(slide, {
+//     x: gsap.utils.random(-500, 500), // Random horizontal position
+//     y: gsap.utils.random(-500, 500), // Random vertical position
+//     opacity: 0,
+//   });
+
+//   gsap.to(slide, {
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: slide,
+//       start: 'top 80%',
+//       end: 'top 20%',
+//       scrub: true,
+//     },
+//   });
+// });
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const slides = gsap.utils.toArray('.slide');
+// const container = document.querySelector('.container');
+
+// slides.forEach((slide, index) => {
+//   gsap.set(slide, {
+//     x: gsap.utils.random(-500, 500), // Random horizontal position
+//     y: gsap.utils.random(-500, 500), // Random vertical position
+//   });
+
+//   gsap.to(slide, {
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: container,
+//       scrub: true,
+//       start: 'top bottom', // Adjust as needed
+//       end: 'bottom top', // Adjust as needed
+//     },
+//   });
+// });
+
+//       gsap.registerPlugin(ScrollTrigger);
+
+// const slides = gsap.utils.toArray('.slide');
+// const container = document.querySelector('.container');
+
+// const slideCount = slides.length;
+// const slideWidth = container.offsetWidth;
+
+// gsap.set(container, {
+//   width: `${slideCount * slideWidth}px`,
+// });
+
+// slides.forEach((slide, index) => {
+//   gsap.set(slide, {
+//     x: `${index * slideWidth}px`,
+//   });
+
+//   gsap.to(slide, {
+//     x: `+=${slideWidth * slideCount}`,
+//     modifiers: {
+//       x: gsap.utils.unitize((x) => parseFloat(x) % (slideWidth * slideCount)),
+//     },
+//     ease: 'ease',
+//     scrollTrigger: {
+//       trigger: container,
+//       scrub: 1,
+//       start: 'top top',
+//       end: 'bottom',
+//       pin: true,
+//     },
+//   });
+// });
+
+
+      </script>
+</body>
+</html>
